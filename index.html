@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alok Yadav Portfolio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(2, 6, 23, 0.95);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+nav h1 {
+    color: #38bdf8;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+nav h1:hover {
+    transform: scale(1.05);
+}
+
+nav a {
+    color: white;
+    margin-left: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #38bdf8;
+    transition: width 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.resume-link {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white !important;
+}
+
+.resume-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}
+
+.resume-link::after {
+    display: none;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: radial-gradient(circle at center, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    animation: slideDown 0.8s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero span {
+    color: #38bdf8;
+    background: linear-gradient(45deg, #38bdf8, #0ea5e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero p {
+    margin: 20px 0 30px;
+    font-size: 20px;
+    color: #94a3b8;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero button {
+    padding: 15px 35px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: white;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(56, 189, 248, 0.6);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #38bdf8;
+    border: 2px solid #38bdf8;
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+}
+
+.btn-secondary span {
+    font-size: 20px;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #38bdf8;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 60%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #38bdf8, transparent);
+    bottom: -10px;
+    left: 20%;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    cursor: pointer;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #334155, #475569);
+    border-color: #38bdf8;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+/* PROJECTS */
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 30px;
+    width: 300px;
+    border-radius: 15px;
+    transition: all 0.3s;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #38bdf8;
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.3);
+}
+
+.card h3 {
+    color: #38bdf8;
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.card a {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.card a:hover {
+    color: #0ea5e9;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.contact-item {
+    background: linear-gradient(135deg, #1e293b, #334155);
+    padding: 25px 30px;
+    border-radius: 15px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-width: 280px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    transition: all 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
+    background: linear-gradient(135deg, #334155, #475569);
+}
+
+.contact-item .icon {
+    font-size: 36px;
+    filter: grayscale(0.3);
+    transition: all 0.3s;
+}
+
+.contact-item:hover .icon {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.contact-item .label {
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.contact-item .value {
+    color: #cbd5e1;
+    font-size: 14px;
+    word-break: break-all;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    margin-top: 50px;
+    border-top: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 20px;
+    }
+    
+    nav div {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    nav a {
+        margin-left: 0;
+        font-size: 14px;
+    }
+    
+    .resume-link {
+        padding: 6px 15px;
+    }
+    
+    .hero {
+        padding: 80px 20px;
+    }
+    
+    .hero h2 {
+        font-size: 28px;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    .section {
+        padding: 50px 20px;
+    }
+    
+    .section h2 {
+        font-size: 28px;
+    }
+    
+    .skills {
+        gap: 10px;
+    }
+    
+    .skill {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .projects {
+        gap: 20px;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 350px;
+        padding: 25px;
+    }
+    
+    .card h3 {
+        font-size: 20px;
+    }
+    
+    .card p {
+        font-size: 14px;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .contact-item {
+        width: 100%;
+        max-width: 350px;
+        min-width: auto;
+        padding: 20px;
+    }
+    
+    .contact-item .icon {
+        font-size: 32px;
+    }
+    
+    .contact-item .label {
+        font-size: 16px;
+    }
+    
+    .contact-item .value {
+        font-size: 13px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .hero button {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+    
+    footer {
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 24px;
+    }
+    
+    .hero h2 {
+        font-size: 24px;
+    }
+    
+    .hero p {
+        font-size: 14px;
+    }
+    
+    .section h2 {
+        font-size: 24px;
+    }
+    
+    .card {
+        max-width: 100%;
+    }
+    
+    .contact-item {
+        max-width: 100%;
+    }
+}
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <h1>Alok</h1>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#projects">Work</a>
+        <a href="#" class="resume-link" id="resumeLink">Resume</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h2>Hello, I'm <span>Alok Yadav</span></h2>
+    <p>Python Developer | Data Analyst | Backend Enthusiast</p>
+    <div class="hero-buttons">
+        <button onclick="scrollToContact()" class="btn-primary">Contact Me</button>
+        <button onclick="viewResume()" class="btn-secondary">
+            <span>📄</span> View Resume
+        </button>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About Me</h2>
+    <p style="text-align:center;">
+        I am a Python developer with experience in data analysis and REST API-based projects. I enjoy working with data using Pandas and building backend logic. Currently, I am learning Django and Flask to develop scalable web applications.
+        <br>
+        I am actively seeking opportunities to apply my skills in real-world projects and grow as a developer.
+    </p>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">REST API</div>
+        <div class="skill">Django (Learning)</div>
+        <div class="skill">Flask (Learning)</div>
+        <div class="skill">Machine Learning (Basics)</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript (Learning)</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects">
+
+        <div class="card">
+            <h3>Data Analysis System</h3>
+            <p>Built a Python-based data analysis system using Pandas and REST APIs to clean, process, and analyze structured data, generating automated reports.</p>
+            <a href="https://github.com/Alok-Ydvv/data-analysis-api-project" target="_blank">💻 View Code</a>
+        </div>
+
+        <div class="card">
+            <h3>Portfolio Website</h3>
+            <p>Designed and developed a responsive personal portfolio to showcase projects and technical skills using HTML and CSS.</p>
+        </div>
+
+        <div class="card">
+            <h3>Advanced To-Do App</h3>
+            <p>A task management web app with filtering, categories, and local storage. Designed with focus on structured data handling.</p>
+            <a href="https://alok-ydvv.github.io/todo-app" target="_blank">🔗 Live Demo</a><br>
+            <a href="https://github.com/alok-ydvv/todo-app" target="_blank">💻 View Code</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section contact">
+    <h2>Get In Touch</h2>
+    <p style="max-width: 600px; margin: 0 auto 40px; color: #94a3b8;">
+        Feel free to reach out for collaborations, opportunities, or just a friendly chat!
+    </p>
+    <div class="contact-links">
+        <a href="mailto:alokpratapyadav85@gmail.com" class="contact-item">
+            <span class="icon">📧</span>
+            <span class="label">Email</span>
+            <span class="value">alokpratapyadav85@gmail.com</span>
+        </a>
+        <a href="https://www.linkedin.com/in/alok-ydv" target="_blank" class="contact-item">
+            <span class="icon">💼</span>
+            <span class="label">LinkedIn</span>
+            <span class="value">linkedin.com/in/alok-ydv</span>
+        </a>
+        <a href="https://github.com/alok-ydvv" target="_blank" class="contact-item">
+            <span class="icon">💻</span>
+            <span class="label">GitHub</span>
+            <span class="value">github.com/alok-ydvv</span>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Alok Yadav</p>
+</footer>
+
+<script>
+function scrollToContact() {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+}
+
+function viewResume() {
+    window.open("https://alok-ydvv.github.io/Resume/", "_blank");
+}
+
+document.getElementById("resumeLink").addEventListener("click", function(e) {
+    e.preventDefault();
+    viewResume();
+});
+</script>
+
+</body>
+</html>
