@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Alok Pratap Yadav - Aspiring Software Developer (Python, Django, FastAPI, Flutter, React). Portfolio of projects, skills and training." />
-  <meta name="theme-color" content="#0f172a" />
+  <meta name="theme-color" content="#0b1120" />
   <title>Alok Pratap Yadav | Software Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,73 +16,130 @@
 
   <header class="site-header" id="top">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="#top" class="brand">AY<span>.</span></a>
+      <a href="#top" class="brand" aria-label="Back to top">AY<span>.</span></a>
       <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#training">Training</a></li>
-        <li><a href="#contact" class="btn btn-small">Contact</a></li>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#education" data-nav>Education</a></li>
+        <li><a href="#training" data-nav>Training</a></li>
+        <li><a href="#contact" class="btn btn-small" data-nav>Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <!-- Hero -->
-    <section class="hero container">
-      <p class="eyebrow">Hello, I'm</p>
-      <h1>Alok Pratap Yadav</h1>
-      <p class="role">Aspiring Software Developer - Python | Flutter | Django | React</p>
-      <p class="location">Bhopal, India</p>
-      <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+        <span class="grid-overlay"></span>
+      </div>
+
+      <div class="container hero-inner">
+        <span class="badge"><span class="pulse-dot" aria-hidden="true"></span>Open to internship opportunities</span>
+
+        <h1>Hi, I'm <span class="grad-text">Alok Pratap Yadav</span></h1>
+        <p class="role">Aspiring Software Developer</p>
+
+        <p class="typed-line" aria-label="Currently working with Python, Django, Flutter and React">
+          <span id="typed" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span>
+        </p>
+
+        <p class="location">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Bhopal, India
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/alok-ydvv" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/alok-ydv" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:alokpratapyadav85@gmail.com" aria-label="Email">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <a href="#stats" class="scroll-hint" aria-label="Scroll down">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- Stats -->
+    <section id="stats" class="stats container" aria-label="Highlights">
+      <div class="stat card-glow" data-glow>
+        <strong>4</strong><span>Projects built</span>
+      </div>
+      <div class="stat card-glow" data-glow>
+        <strong>20+</strong><span>Technologies</span>
+      </div>
+      <div class="stat card-glow" data-glow>
+        <strong>100</strong><span>Sample questions tested</span>
+      </div>
+      <div class="stat card-glow" data-glow>
+        <strong>2</strong><span>Training programs</span>
       </div>
     </section>
 
     <!-- About -->
     <section id="about" class="section container">
-      <h2 class="section-title">About Me</h2>
-      <p class="lead">
-        Computer Science (AI &amp; ML) student with hands-on practice in Python (Django, FastAPI), Flutter, and React.
-        I have built academic projects in group tracking, task boards, document Q&amp;A, and basic object detection.
-      </p>
-      <p>
-        I am familiar with SQL, PostgreSQL, Pandas, and REST APIs. I completed Python and Full Stack training at
-        Cybrom Technology and Cognifyz Technologies. I am looking for an internship where I can learn, contribute,
-        and improve under guidance.
-      </p>
+      <h2 class="section-title">About <span class="grad-text">Me</span></h2>
+      <div class="about-grid">
+        <p class="lead">
+          Computer Science (AI &amp; ML) student with hands-on practice in Python (Django, FastAPI), Flutter, and React.
+          I have built academic projects in group tracking, task boards, document Q&amp;A, and basic object detection.
+        </p>
+        <div class="about-text">
+          <p>
+            I am familiar with SQL, PostgreSQL, Pandas, and REST APIs. I completed Python and Full Stack training at
+            Cybrom Technology and Cognifyz Technologies.
+          </p>
+          <p>
+            I am looking for an internship where I can learn, contribute, and improve under guidance.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title">Technical <span class="grad-text">Skills</span></h2>
         <div class="skills-grid">
-          <article class="card">
-            <h3>Languages</h3>
+          <article class="card card-glow" data-glow>
+            <h3><span class="card-icon">{ }</span>Languages</h3>
             <ul class="tags">
               <li>Python</li><li>SQL</li><li>JavaScript</li><li>Dart</li>
             </ul>
           </article>
-          <article class="card">
-            <h3>Backend / Mobile</h3>
+          <article class="card card-glow" data-glow>
+            <h3><span class="card-icon">&lt;/&gt;</span>Backend / Mobile</h3>
             <ul class="tags">
               <li>Django</li><li>FastAPI</li><li>Flutter</li><li>REST APIs</li>
             </ul>
           </article>
-          <article class="card">
-            <h3>Databases &amp; Data</h3>
+          <article class="card card-glow" data-glow>
+            <h3><span class="card-icon">DB</span>Databases &amp; Data</h3>
             <ul class="tags">
               <li>PostgreSQL</li><li>MySQL</li><li>Pandas</li><li>NumPy</li>
             </ul>
           </article>
-          <article class="card">
-            <h3>Tools</h3>
+          <article class="card card-glow" data-glow>
+            <h3><span class="card-icon">&#9881;</span>Tools</h3>
             <ul class="tags">
               <li>Git</li><li>Postman</li><li>Docker (basics)</li>
             </ul>
@@ -93,10 +150,11 @@
 
     <!-- Projects -->
     <section id="projects" class="section container">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">Featured <span class="grad-text">Projects</span></h2>
       <div class="projects-grid">
 
-        <article class="card project">
+        <article class="card card-glow project" data-glow style="--accent-color: #38bdf8;">
+          <span class="project-num">01</span>
           <div class="project-head">
             <h3>RideSync</h3>
             <p class="project-sub">Group Travel Tracking App</p>
@@ -111,7 +169,8 @@
           </ul>
         </article>
 
-        <article class="card project">
+        <article class="card card-glow project" data-glow style="--accent-color: #818cf8;">
+          <span class="project-num">02</span>
           <div class="project-head">
             <h3>LiveBoard</h3>
             <p class="project-sub">Collaborative Task Board</p>
@@ -126,7 +185,8 @@
           </ul>
         </article>
 
-        <article class="card project">
+        <article class="card card-glow project" data-glow style="--accent-color: #34d399;">
+          <span class="project-num">03</span>
           <div class="project-head">
             <h3>DocuMind</h3>
             <p class="project-sub">Document Q&amp;A App</p>
@@ -141,7 +201,8 @@
           </ul>
         </article>
 
-        <article class="card project">
+        <article class="card card-glow project" data-glow style="--accent-color: #f472b6;">
+          <span class="project-num">04</span>
           <div class="project-head">
             <h3>ARGUS</h3>
             <p class="project-sub">Basic Surveillance Prototype</p>
@@ -161,59 +222,82 @@
     <!-- Education -->
     <section id="education" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Education</h2>
-        <article class="card timeline-item">
-          <div class="timeline-meta">2023 - 2027 (Expected)</div>
-          <h3>Bachelor of Technology - Computer Science (AI &amp; ML)</h3>
-          <p class="muted">Oriental Institute of Science &amp; Technology, Bhopal (RGPV University)</p>
-          <p><strong>Coursework:</strong> Data Structures &amp; Algorithms, DBMS, OOP, Computer Networks, Operating Systems</p>
-        </article>
+        <h2 class="section-title">Edu<span class="grad-text">cation</span></h2>
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="card card-glow" data-glow>
+              <div class="timeline-meta">2023 - 2027 (Expected)</div>
+              <h3>Bachelor of Technology - Computer Science (AI &amp; ML)</h3>
+              <p class="muted">Oriental Institute of Science &amp; Technology, Bhopal (RGPV University)</p>
+              <p><strong>Coursework:</strong> Data Structures &amp; Algorithms, DBMS, OOP, Computer Networks, Operating Systems</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
     <!-- Training -->
     <section id="training" class="section container">
-      <h2 class="section-title">Training</h2>
+      <h2 class="section-title">Train<span class="grad-text">ing</span></h2>
       <div class="timeline">
-        <article class="card timeline-item">
-          <div class="timeline-meta">2026</div>
-          <h3>Full Stack Development Workshop</h3>
-          <p class="muted">Cognifyz Technologies</p>
-          <p>Practiced HTML, CSS, JavaScript frontend and REST API integration with Flask; used Git and Agile basics.</p>
+        <article class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="card card-glow" data-glow>
+            <div class="timeline-meta">2026</div>
+            <h3>Full Stack Development Workshop</h3>
+            <p class="muted">Cognifyz Technologies</p>
+            <p>Practiced HTML, CSS, JavaScript frontend and REST API integration with Flask; used Git and Agile basics.</p>
+          </div>
         </article>
-        <article class="card timeline-item">
-          <div class="timeline-meta">2024</div>
-          <h3>Python Development Workshop</h3>
-          <p class="muted">Cybrom Technology</p>
-          <p>Practiced Python automation, REST APIs, and basic data handling with Pandas and NumPy.</p>
+        <article class="timeline-item">
+          <span class="timeline-dot" aria-hidden="true"></span>
+          <div class="card card-glow" data-glow>
+            <div class="timeline-meta">2024</div>
+            <h3>Python Development Workshop</h3>
+            <p class="muted">Cybrom Technology</p>
+            <p>Practiced Python automation, REST APIs, and basic data handling with Pandas and NumPy.</p>
+          </div>
         </article>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section section-alt">
-      <div class="container contact">
-        <h2 class="section-title">Let's Connect</h2>
-        <p class="lead">I am open to internship opportunities where I can learn, contribute, and grow.</p>
-        <ul class="contact-list">
-          <li>
+      <div class="container">
+        <h2 class="section-title">Let's <span class="grad-text">Connect</span></h2>
+        <p class="lead contact-lead">I am open to internship opportunities where I can learn, contribute, and grow.</p>
+        <div class="contact-grid">
+          <a class="contact-card card-glow" data-glow href="mailto:alokpratapyadav85@gmail.com">
+            <span class="contact-icon">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+            </span>
             <span class="label">Email</span>
-            <a href="mailto:alokpratapyadav85@gmail.com">alokpratapyadav85@gmail.com</a>
-          </li>
-          <li>
+            <span class="value">alokpratapyadav85@gmail.com</span>
+          </a>
+          <a class="contact-card card-glow" data-glow href="tel:+919572930436">
+            <span class="contact-icon">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            </span>
             <span class="label">Phone</span>
-            <a href="tel:+919572930436">+91 95729 30436</a>
-          </li>
-          <li>
+            <span class="value">+91 95729 30436</span>
+          </a>
+          <a class="contact-card card-glow" data-glow href="https://linkedin.com/in/alok-ydv" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </span>
             <span class="label">LinkedIn</span>
-            <a href="https://linkedin.com/in/alok-ydv" target="_blank" rel="noopener noreferrer">linkedin.com/in/alok-ydv</a>
-          </li>
-          <li>
+            <span class="value">linkedin.com/in/alok-ydv</span>
+          </a>
+          <a class="contact-card card-glow" data-glow href="https://github.com/alok-ydvv" target="_blank" rel="noopener noreferrer">
+            <span class="contact-icon">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </span>
             <span class="label">GitHub</span>
-            <a href="https://github.com/alok-ydvv" target="_blank" rel="noopener noreferrer">github.com/alok-ydvv</a>
-          </li>
-        </ul>
-        <div class="hero-actions">
+            <span class="value">github.com/alok-ydvv</span>
+          </a>
+        </div>
+        <div class="hero-actions contact-actions">
           <a href="mailto:alokpratapyadav85@gmail.com" class="btn btn-primary">Send an Email</a>
         </div>
       </div>
@@ -223,6 +307,10 @@
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> Alok Pratap Yadav. Built with HTML, CSS and JavaScript.</p>
   </footer>
+
+  <a href="#top" class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
