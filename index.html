@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Alok Pratap Yadav - Aspiring Software Developer (Python, Django, FastAPI, Flutter, React). Portfolio of projects, skills and training." />
+  <meta name="theme-color" content="#0f172a" />
+  <title>Alok Pratap Yadav | Software Developer Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#top" class="brand">AY<span>.</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#contact" class="btn btn-small">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero container">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1>Alok Pratap Yadav</h1>
+      <p class="role">Aspiring Software Developer - Python | Flutter | Django | React</p>
+      <p class="location">Bhopal, India</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section container">
+      <h2 class="section-title">About Me</h2>
+      <p class="lead">
+        Computer Science (AI &amp; ML) student with hands-on practice in Python (Django, FastAPI), Flutter, and React.
+        I have built academic projects in group tracking, task boards, document Q&amp;A, and basic object detection.
+      </p>
+      <p>
+        I am familiar with SQL, PostgreSQL, Pandas, and REST APIs. I completed Python and Full Stack training at
+        Cybrom Technology and Cognifyz Technologies. I am looking for an internship where I can learn, contribute,
+        and improve under guidance.
+      </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <article class="card">
+            <h3>Languages</h3>
+            <ul class="tags">
+              <li>Python</li><li>SQL</li><li>JavaScript</li><li>Dart</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Backend / Mobile</h3>
+            <ul class="tags">
+              <li>Django</li><li>FastAPI</li><li>Flutter</li><li>REST APIs</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Databases &amp; Data</h3>
+            <ul class="tags">
+              <li>PostgreSQL</li><li>MySQL</li><li>Pandas</li><li>NumPy</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Tools</h3>
+            <ul class="tags">
+              <li>Git</li><li>Postman</li><li>Docker (basics)</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>RideSync</h3>
+            <p class="project-sub">Group Travel Tracking App</p>
+          </div>
+          <ul class="tags">
+            <li>Flutter</li><li>Dart</li><li>Supabase</li><li>PostgreSQL</li><li>FCM</li>
+          </ul>
+          <ul class="bullets">
+            <li>Built a group-tracking app for bike/car rides with live location sharing, Leader/Middle/Tail roles, and gap and overspeed alerts.</li>
+            <li>Added QR and 6-digit group invites, group chat, SOS alert, and ride history with playback using Supabase Realtime and PostgreSQL.</li>
+            <li>Added phone-OTP/email login with basic row-level security; connected free map/weather APIs through backend functions and wrote basic automated tests.</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>LiveBoard</h3>
+            <p class="project-sub">Collaborative Task Board</p>
+          </div>
+          <ul class="tags">
+            <li>Python</li><li>Django</li><li>React</li><li>Redis</li><li>Docker</li><li>PostgreSQL</li>
+          </ul>
+          <ul class="bullets">
+            <li>Made a task board app where updates reflect for all users using Django Channels WebSockets and React.</li>
+            <li>Added JWT login REST APIs and Redis caching for faster board loading.</li>
+            <li>Used Docker for setup and GitHub Actions for basic build and deploy.</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>DocuMind</h3>
+            <p class="project-sub">Document Q&amp;A App</p>
+          </div>
+          <ul class="tags">
+            <li>Python</li><li>FastAPI</li><li>LangChain</li><li>FAISS</li><li>Streamlit</li>
+          </ul>
+          <ul class="bullets">
+            <li>Made a Q&amp;A app that answers from uploaded PDF/DOCX files with source references.</li>
+            <li>Used text chunking and FAISS search with FastAPI backend and Streamlit UI.</li>
+            <li>Tested on 100 sample questions to check answer quality and citations.</li>
+          </ul>
+        </article>
+
+        <article class="card project">
+          <div class="project-head">
+            <h3>ARGUS</h3>
+            <p class="project-sub">Basic Surveillance Prototype</p>
+          </div>
+          <ul class="tags">
+            <li>Python</li><li>OpenCV</li><li>YOLO</li>
+          </ul>
+          <ul class="bullets">
+            <li>Made a basic video detection prototype using YOLO for object detection and tracking.</li>
+            <li>Worked on improving detection speed and simple alert flow for multiple video inputs.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <article class="card timeline-item">
+          <div class="timeline-meta">2023 - 2027 (Expected)</div>
+          <h3>Bachelor of Technology - Computer Science (AI &amp; ML)</h3>
+          <p class="muted">Oriental Institute of Science &amp; Technology, Bhopal (RGPV University)</p>
+          <p><strong>Coursework:</strong> Data Structures &amp; Algorithms, DBMS, OOP, Computer Networks, Operating Systems</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Training -->
+    <section id="training" class="section container">
+      <h2 class="section-title">Training</h2>
+      <div class="timeline">
+        <article class="card timeline-item">
+          <div class="timeline-meta">2026</div>
+          <h3>Full Stack Development Workshop</h3>
+          <p class="muted">Cognifyz Technologies</p>
+          <p>Practiced HTML, CSS, JavaScript frontend and REST API integration with Flask; used Git and Agile basics.</p>
+        </article>
+        <article class="card timeline-item">
+          <div class="timeline-meta">2024</div>
+          <h3>Python Development Workshop</h3>
+          <p class="muted">Cybrom Technology</p>
+          <p>Practiced Python automation, REST APIs, and basic data handling with Pandas and NumPy.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+      <div class="container contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="lead">I am open to internship opportunities where I can learn, contribute, and grow.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="label">Email</span>
+            <a href="mailto:alokpratapyadav85@gmail.com">alokpratapyadav85@gmail.com</a>
+          </li>
+          <li>
+            <span class="label">Phone</span>
+            <a href="tel:+919572930436">+91 95729 30436</a>
+          </li>
+          <li>
+            <span class="label">LinkedIn</span>
+            <a href="https://linkedin.com/in/alok-ydv" target="_blank" rel="noopener noreferrer">linkedin.com/in/alok-ydv</a>
+          </li>
+          <li>
+            <span class="label">GitHub</span>
+            <a href="https://github.com/alok-ydvv" target="_blank" rel="noopener noreferrer">github.com/alok-ydvv</a>
+          </li>
+        </ul>
+        <div class="hero-actions">
+          <a href="mailto:alokpratapyadav85@gmail.com" class="btn btn-primary">Send an Email</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Alok Pratap Yadav. Built with HTML, CSS and JavaScript.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
